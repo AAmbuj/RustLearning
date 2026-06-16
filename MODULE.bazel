@@ -1,0 +1,14 @@
+# MODULE.bazel
+module(
+    name = "my_bazel_rust",
+    version = "1.0.0",
+)
+
+# Fetch the official Rust rules
+bazel_dep(name = "rules_rust", version = "0.70.0")
+
+# Register the standard stable Rust toolchain
+rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
+rust.toolchain(edition = "2024")
+use_repo(rust, "rust_toolchains")
+register_toolchains("@rust_toolchains//:all")

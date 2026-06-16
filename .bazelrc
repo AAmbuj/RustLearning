@@ -1,0 +1,5 @@
+# Use GNU ld (BFD) instead of deprecated gold linker
+# This avoids the deprecation warning and improves Rust compilation
+build --linkopt=-fuse-ld=bfd
+run --ui_event_filters=stdout,stderr
+run --noshow_progress
