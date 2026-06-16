@@ -1,0 +1,46 @@
+# BUILD.bazel
+load("@rules_rust//rust:defs.bzl", "rust_binary")
+
+# Original hello world
+rust_binary(
+    name = "hello_world",
+    srcs = ["src/hello_world.rs"],
+    edition = "2024",
+)
+
+# Rust Learning Lessons
+rust_binary(
+    name = "lesson1_variables",
+    srcs = ["src/lesson1_variables.rs"],
+    edition = "2024",
+)
+
+rust_binary(
+    name = "lesson2_ownership",
+    srcs = ["src/lesson2_ownership.rs"],
+    edition = "2024",
+)
+
+rust_binary(
+    name = "lesson3_enums",
+    srcs = ["src/lesson3_enums.rs"],
+    edition = "2024",
+)
+
+rust_binary(
+    name = "lesson4_structs",
+    srcs = ["src/lesson4_structs.rs"],
+    edition = "2024",
+)
+
+rust_binary(
+    name = "lesson5_error_handling",
+    srcs = ["src/lesson5_error_handling.rs"],
+    edition = "2024",
+)
+
+rust_binary(
+    name = "lesson6_collections",
+    srcs = ["src/lesson6_collections.rs"],
+    edition = "2024",
+)
